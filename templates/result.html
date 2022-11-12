@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
 </head>
-<body>
+{% block body %}
     <p1> 
         Amount: {{ symbol }} {{ amount }} <!-- Variable passed in App.py -->
     </p1>
-    <button action="/">Home</button>
-</body>
+    <a href="/">Home</a>
+{% endblock %}
 </html>

@@ -15,8 +15,8 @@ def homepage():
 def result():
     """Currency Result"""
     if request.method == "POST" :
-        conv_from = request.form.get('conv-from')
-        conv_to = request.form.get('conv-to')
+        conv_from = request.form.get('conv-from').upper()
+        conv_to = request.form.get('conv-to').upper()
         invalid_Inputs = validate_inputs(conv_from, conv_to)
 
         if len(invalid_Inputs) <= 0:
@@ -24,7 +24,8 @@ def result():
             symbol = get_symbol(conv_to)
             return render_template("result.html", amount=amount, symbol=symbol)
         else:
-            flash ("EERROORR!!")
-            redirect('/converter.html')
+            print('boobies')
+            for x in invalid_Inputs:
+                flash(x)
+            return redirect('/')
             
-    return render_template('/converter.html')

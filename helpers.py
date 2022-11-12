@@ -19,6 +19,7 @@ def validate_inputs(original_cur, converted_cur):
     original_symb = get_symbol(original_cur)
     conv_symb = get_symbol(converted_cur)
 
+
     if ( original_symb == None):
         invalid_inputs.append('Convert FROM Code is invalid')
     if (conv_symb == None): 
