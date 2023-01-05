@@ -24,7 +24,6 @@ def result():
             symbol = get_symbol(conv_to)
             return render_template("result.html", amount=amount, symbol=symbol)
         else:
-            print('boobies')
             for x in invalid_Inputs:
                 flash(x)
             return redirect('/')
